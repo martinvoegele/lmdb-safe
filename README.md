@@ -59,6 +59,23 @@ When using `lmdb-safe`, errors "that should never happen" are turned into
 exceptions. An error that merely indicates that a key can not be found is
 passed on as a regular LMDB error code.
 
+# Installation
+Install LMDB:
+```
+  sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+```  
+Install boost:
+```
+  sudo apt-get update
+  sudo apt-get install libboost-all-dev
+```
+Compile the examples for the wrapper:
+```
+  git clone https://github.com/martinvoegele/lmdb-safe.git
+  cd lmdb-safe 
+  make
+```
+  
 # Example
 The following example has no overhead compared to native LMDB, but already
 exhibits several ways in which lmdb-safe automates LMDB constraints:
